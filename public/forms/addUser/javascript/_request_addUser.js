@@ -124,19 +124,16 @@ async function submitButtonListener(e) {
             };
         }
 
+        closeWindow();
+        
     } catch (e) {
         console.log(e);
         closeWindow(`Unexpected error...`);
     }
 
-    closeWindow();
-
     function closeWindow(text = `It's done.`) {
-        try {
-            changedRenderElements[0].parentNode.removeChild(changedRenderElements[0]);
-            changedRenderElements[1].style.cssText = ``;
-        } catch (e) { }
-
+        changedRenderElements[0].parentNode.removeChild(changedRenderElements[0]);
+        changedRenderElements[1].style.cssText = ``;
 
         // .not-use
         document.querySelector('.container').style.cssText =
