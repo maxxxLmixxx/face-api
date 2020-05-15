@@ -1,11 +1,14 @@
-export default function jsonPrettify(data = [ { 'Error': 'no data'} ], containerSelector = '.information-menu') {
+export default function jsonPrettify(data = { error: { 
+  code: `Client error`, message: `Probably wrong image: face cannot be found.\n`} }, 
+  containerSelector = '.information-menu') {
+
     const dataString = JSON.stringify(data, undefined, 4);
     output( syntaxHighlight(dataString) );
 
     // const jsonPretty = JSON.stringify(data, null, 2);  
     // document.querySelector('#information-menu').innerHTML = jsonPretty;
     // document.querySelector('.information-menu').style.cssText = "overflow: scroll";
-
+    
     function output(inp) {
       document.querySelector(containerSelector)
       .appendChild(document.createElement('pre')).innerHTML = inp;
