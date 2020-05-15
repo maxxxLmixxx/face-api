@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/add-user.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
+
+    <link rel="stylesheet" href="/css/loader-animation.css">
+    <title>Add User</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- action="http://localhost:3000/add-user" -->
+        <!-- enctype="multipart/form-data" -->
+        <!-- method="post" -->
+        <form name="add-user" id="add-user" action="/#" method="post" onsubmit="alert('submit!');return false">
+            <h3>Add user form...</h3>
+            <h4>Input data about yourself</h4>
+            <fieldset>
+                <input name="name" id="name" value="Kaguya-sama" placeholder="Your name" type="text" tabindex="1"
+                autofocus>
+            </fieldset>
+            <fieldset>
+                <!-- <input placeholder="Access Level" type="text" tabindex="2" required> -->
+                
+                <div class="select">
+                    <select name="accessLevel" id="accessLevel" tabindex="2">
+                      <option disabled>Choose an option</option>
+                      <option value="1"selected >Level #1</option>
+                      <option value="2">Level #2</option>
+                      <option value="3">Level #3</option>
+                    </select>
+                  </div>
+
+            </fieldset>
+            <fieldset id='image-placer' onselectstart="return false" onmousedown="return false"></fieldset>
+            <fieldset>
+                <textarea name="description" id="description" placeholder="Type about yourself(optional)...." tabindex="3"></textarea>
+            </fieldset>
+            <fieldset>
+                <div id="add-user-submit" onselectstart="return false" onmousedown="return false">Submit</div>
+                <!-- <button type="submit" class="add-user-submit">Submit</button> -->
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="/javascript/globalVariables.js"></script>
+    <script src="./javascript/_request_addUser.js" type="module"></script>
+</body>
+
+</html>

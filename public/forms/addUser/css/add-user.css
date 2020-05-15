@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "San Francisco";
+    src: url("/assets/fonts/San_Francisco.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Light";
+    src: url("/assets/fonts/Roboto-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Light", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #888;
+  /* background: rgb(16, 35, 42); */
+  background: linear-gradient(180deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 50%, rgba(44,83,100,1) 100%);
+
+  overflow: visible;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  max-width: 400px;
+  min-width: 400px;
+
+  position: relative;
+}
+
+.image-placer {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="image"] {
+    width: 100%;
+    height: auto;
+    margin-top: -8px;
+
+    pointer-events: none;
+}
+
+#add-user select,
+#add-user select option,
+#add-user-submit {
+  width: 100%;
+  text-align: center;
+}
+
+#add-user input[type="text"],
+#add-user textarea,
+#add-user select,
+#add-user-submit {
+  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#add-user {
+  background: rgb(41, 77, 93);
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#add-user h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#add-user h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#add-user input[type="text"],
+#add-user textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#add-user input[type="text"]:hover,
+#add-user textarea:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#add-user textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#add-user-submit{
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: rgb(76, 175, 129);
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  transition: 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+#add-user-submit:hover {
+    transform: scale(1.0050);
+    transition: 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}

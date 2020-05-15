@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset&general.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/copy-del-ink.css">
+    <link rel="stylesheet" href="../addUser/css/dropdown.css">
+    <link rel="stylesheet" href="../../css/loader-animation.css">
+    <title>Show collection</title>
+</head>
+<body>
+
+    <div class="collection-container root">
+        <div class="accessLevel-group accessLevel-group-1">
+            <span class="accessLevel-group-name" style="display: none;">Access Level 1</span>
+        </div>
+        <div class="accessLevel-group accessLevel-group-2">
+            <span class="accessLevel-group-name" style="display: none;">Access Level 2</span>
+        </div>
+        <div class="accessLevel-group accessLevel-group-3">
+            <span class="accessLevel-group-name" style="display: none;">Access Level 3</span>
+        </div>
+    </div>
+
+    
+    <div class="copy-i-container">
+        <span class="tooltip-text" id="my-tooltip">Copy</span>
+        <div id="click-me" onselectstart="return false" onmousedown="return false">`</div>
+    </div>
+
+    <script src="/javascript/globalVariables.js"></script>    
+    <script src="./javascript/fetch-renderCollection.js" type="module"></script>
+</body>
+</html>

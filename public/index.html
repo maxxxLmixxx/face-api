@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset&general.css">
+    <link rel="stylesheet" href="./css/left-menu.css">
+    <link rel="stylesheet" href="./css/left-aside.css">
+    <link rel="stylesheet" href="./css/main-content.css">
+    <link rel="stylesheet" href="./css/json-output.css">
+    <link rel="stylesheet" href="./css/loader-animation.css">
+    <link rel="stylesheet" href="./css/mediaQueries.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class='header'></header>
+
+    <main class='main'>
+        <nav class="left-menu">
+            <ul class="left-menu--top">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href="./forms/showCollection/showCollection.html" target="_blank"></a>
+                    <span class="hover-container no-display" onmousedown='return false'>
+                        <span class="hover-item">Show users collection</span>
+                    </span>
+                </li>
+                <li>
+                    <a href="#"></a>
+                    <span class="hover-container no-display" onmousedown='return false'>
+                        <span class="hover-item">Add user</span>
+                    </span>
+                </li>
+            </ul>
+            <ul class="left-menu--bottom">
+                <li><a href="#"></a>
+                    <span class="hover-container no-display">
+                        <span class="hover-item info">'http://localhost:3000'<br>
+                        <br>Method: POST: '/faceParametres'<br>
+                        <br>Method: POST: '/add-user'<br>
+                            '/add-user/modified=false'<br>
+                            '/add-user/modified=true'<br>
+                        <br>Method: POST: [ '/find-one', '/find-all' ]<br>
+                        <br>Method: GET: '/return-collection'<br>
+                            '/return-collection/:name'<br>
+                            '/return-collection/name/:name'<br>
+                            '/return-collection/faceId/:faceId'<br>
+                            '/return-collection/accessLevel/:accessLevel'<br>
+                        <br>Method: GET: '/delete/:name/:password'<br>
+                            Method: DELETE: '/delete/:name/:password'<br>
+                        <br>Method: GET: '/delete-all/:password'<br>
+                            Method: DELETE: '/delete-all/:password'<br>
+                        </span>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="left-aside" onselectstart="return false" onmousedown="return false">
+            <div class="left-aside--top">
+                <input type="text" placeholder="Search doesn't work yet...">
+                <span class="hide-button"></span>
+            </div>
+            
+            <div class="left-aside--root">  
+                <canvas class="picture-in-root"></canvas>
+                <!-- add user photo here -->
+                <!-- <img class="picture-in-root" src='...'></img> -->
+            </div>
+        
+        </div>
+
+        <div class="main-content">
+            <div class="main-content--header">
+                <div onmousedown='return false' class="edit-button">
+                    <span class="edit-icon"></span>
+                    <span class="edit-text">Edit grid</span>
+                </div>
+                <div onmousedown='return false' class="camera-layout"><span>Untitled layout</span></div>
+                <div onmousedown='return false' class="main-content--header---buttons">
+                    <div id="send-to-server" class="save-button save-button--blue"><span>Who're you?</span></div> 
+                    <div id="add-picture" class="save-button save-button--gray"><span>Snap.</span></div>                     
+                </div>
+            </div>
+
+            <div class="main-content--wrapper">
+                <div class="video-wrapper">
+                    <video id="video" autoplay muted></video>
+                </div>
+                <div class="information-menu">
+                </div>
+            </div>
+            
+            <div class="main-content--footer">
+                <div id="face-parametres" class="save-button save-button--blue"><span>Face parametres</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class='footer'></footer>
+
+    <script src="./javascript/globalVariables.js"></script>
+    <script src="./javascript/windowOnClose.js"></script>
+    <script src="./javascript/preload.js" type="module"></script>
+    <script src="./javascript/leftMenuEvents.js"></script>
+    <script src="./javascript/video.js"></script>
+    <script src="./javascript/snap.js" type="module"></script>
+    <script src="./javascript/selection.js" type="module"></script>
+    <script src="./javascript/_request_faceParametres.js" type="module"></script>
+    <script src="./javascript/_request_findOne.js" type="module"></script>
+
+</body>
+</html>

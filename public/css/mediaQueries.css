@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1029px) {
+    .video-wrapper {
+        display: none;
+    }
+    
+    #add-picture {
+        display: none;
+    }
+    #send-to-server {
+        width: 110px;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    .camera-layout {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .edit-button {
+        /* display: none; */
+        margin-right: 20px;
+    }
+
+    .main-content--header---buttons {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 535px) {
+    .main-content--header---buttons {
+        display: none;
+    }
+
+    .main-content--header {
+        justify-content: start;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .main-content {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 51px) {
+    .left-aside {
+        display: none;
+    }
+    .left-menu {
+        width: 100vw;
+    }
+}
