@@ -4,3 +4,4 @@
 node_modules/
 public/.not-use/
 public/.vscode/
+.herokuCommands
