@@ -2,6 +2,7 @@ import { imageFromCanvas } from './__module_convert_canvas-image.js'
 
 {
     const snapButton = document.querySelector('#add-picture'),
+        cameraIcon = document.querySelector('.left-menu--top li:first-child'),
         root = document.querySelector('.left-aside--root'),
         video = document.querySelector('#video'),
         canvas = document.querySelector('canvas'),
@@ -11,7 +12,10 @@ import { imageFromCanvas } from './__module_convert_canvas-image.js'
     canvas.width = imageSizes.width;
     canvas.height = imageSizes.height;
 
-    snapButton.addEventListener('click', () => {
+    snapButton.addEventListener('click', snapEvent);
+    cameraIcon.addEventListener('click', snapEvent);
+    
+    const snapEvent = () => {
         if (localStorage.getItem('pictures-length') == 13) {
             alert('LocalStorage limit exceeded...');
             return;
@@ -50,7 +54,6 @@ import { imageFromCanvas } from './__module_convert_canvas-image.js'
 
         localStorage.setItem('imageSerial', globalVariables.imageSerial);
         localStorage.setItem('currentImage', globalVariables.currentImage);
+    }
     
-    });
-    
-}
+}   

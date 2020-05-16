@@ -3,10 +3,10 @@
         display: none;
     }
     
-    #add-picture {
+    .save-button.save-button--gray {
         display: none;
     }
-    #send-to-server {
+    .save-button.save-button--blue {
         width: 110px;
     }
 }
