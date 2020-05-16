@@ -110,7 +110,9 @@ import Form from './__componenta_html_form.js'
             const serialNum = e.target.className.split(` `)[1].slice(-1);
             const formData = new FormData(document.querySelector(`.add-user-${serialNum}`));
 
-            if(!nameValidation(formData.get(`name`), true)) return;
+            if(!nameValidation(formData.get(`name`), true)) {
+                if(formData.get('name').trim().length) return;
+            } 
             e.target.style.cssText = 'pointer-events: none';
 
             const changedRenderElements = await new Promise((resolve, reject) => {
@@ -147,7 +149,7 @@ import Form from './__componenta_html_form.js'
                 contentType: 'application/json',
                 data: JSON.stringify({
                     name: document.querySelector(`.add-user-${serialNum} h3`).innerHTML.split(` `)[1].toLocaleLowerCase(),
-                    updateName: formData.get(`name`),
+                    updateName: !!formData.get(`name`).trim().length ? formData.get(`name`).trim() : this.name,
                     accessLevel: Number(formData.get(`accessLevel`)),
                     imageData: imageToBinary( document.querySelector(`.img-${serialNum}`) ),
                     description: String(formData.get(`description`))
@@ -179,11 +181,13 @@ import Form from './__componenta_html_form.js'
 
     function inputFocusEventListener(e) {
         if(e.target.tagName != 'INPUT') return;
-        if(!nameValidation(e.target.value)) {
-            e.target.style.cssText = 'border: 1px solid red;';
-            e.target.placeholder = '1st \\w, then only \\w or \\d {[3...20] symbols}';
-        } else {
-            e.target.style.cssText = 'border: 1px solid green;';
+        if(e.target.value.trim().length) {
+            if(!nameValidation(e.target.value)) {
+                e.target.style.cssText = 'border: 1px solid red;';
+                e.target.placeholder = '1st \\w, then only \\w or \\d {[3...20] symbols}';
+            } else {
+                e.target.style.cssText = 'border: 1px solid green;';
+            }
         }
     }
 
