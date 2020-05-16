@@ -15,7 +15,7 @@ import { imageFromCanvas } from './__module_convert_canvas-image.js'
     snapButton.addEventListener('click', snapEvent);
     cameraIcon.addEventListener('click', snapEvent);
     
-    const snapEvent = () => {
+    function snapEvent() {
         if (localStorage.getItem('pictures-length') == 13) {
             alert('LocalStorage limit exceeded...');
             return;
@@ -55,5 +55,5 @@ import { imageFromCanvas } from './__module_convert_canvas-image.js'
         localStorage.setItem('imageSerial', globalVariables.imageSerial);
         localStorage.setItem('currentImage', globalVariables.currentImage);
     }
-    
+
 }   
