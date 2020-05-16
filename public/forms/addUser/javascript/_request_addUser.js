@@ -82,7 +82,7 @@ async function submitButtonListener(e) {
 
         const addUser_response = http_addUser_responseData[Object.keys(http_addUser_responseData)[0]];
         const responseMessage = addUser_response.message || addUser_response.code;
-
+        console.log(responseMessage);
         if (responseMessage == 'Invalid user data.') {
             closeWindow(responseMessage);
         }
