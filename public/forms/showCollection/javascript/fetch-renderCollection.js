@@ -110,9 +110,10 @@ import Form from './__componenta_html_form.js'
             const serialNum = e.target.className.split(` `)[1].slice(-1);
             const formData = new FormData(document.querySelector(`.add-user-${serialNum}`));
 
-            if(!nameValidation(formData.get(`name`), true)) {
-                if(formData.get('name').trim().length) return;
-            } 
+            if(formData.get('name').trim().length) 
+                if(!nameValidation(formData.get(`name`), true))
+                    return;
+            
             e.target.style.cssText = 'pointer-events: none';
 
             const changedRenderElements = await new Promise((resolve, reject) => {
